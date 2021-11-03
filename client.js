@@ -7,6 +7,10 @@ const connect = function() {
     port: 50541
   });
 
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    conn.write('Name: NYY');
+  });
   // when there is a "data" event. Conn.on lets you listen to these events.
   // Here we are logging the data sent by the server.
   conn.on("data", (data) => {
