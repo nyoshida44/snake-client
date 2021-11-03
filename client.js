@@ -24,4 +24,4 @@ const connect = function() {
 };
 
 // Allows other files to call the connect function
-module.exports = connect;
+module.exports = {connect};
